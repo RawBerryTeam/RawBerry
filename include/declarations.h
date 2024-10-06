@@ -6,6 +6,6 @@
  * ---------------------------------------------------------------
 */
 
-void main(void);
+void init_system(void);
 void launch_kernel(void);
 void kernel_panic(void);
