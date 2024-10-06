@@ -6,7 +6,7 @@
  * ---------------------------------------------------------------
 */
 
-#include <../include/declarations.h>
+#include "../include/declarations.h"
 
 /**
  * Main function. Here kernel will start its work. 
