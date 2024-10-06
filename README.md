@@ -12,7 +12,7 @@ Actually nothing... We are working hard to create useful features for this OS.
 
 ## Languages
 
-Rust, C, C++, Assembly
+C, C++, Assembly
 
 ## Authors
 
