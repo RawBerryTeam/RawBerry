@@ -1,8 +1,10 @@
-/target
-/out
-/iso
+# Compilation results
+iso
 *.o
 *.bin
 *.elf
 *.iso
+
+# Just ignore
 .vscode
+.editorconfig
