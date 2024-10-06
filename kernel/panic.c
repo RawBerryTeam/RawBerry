@@ -7,12 +7,14 @@
 */
 
 #include <stdbool.h>
+#include "../drivers/vga.h"
 
 /**
  * Stops every single process and frozes the system.
  */
 void kernel_panic() {
-    while (true) {
-        // Now do nothing. It only keeps system from restarting. 
-    }
+    vga_initialize();
+    vga_color = 12;
+    vga_print_string("Kernel panic!");
+    while (true) {}
 }
