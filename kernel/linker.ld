@@ -1,4 +1,4 @@
-OUTPUT_FORMAT("elf64-x86-64")
+OUTPUT_FORMAT("elf32-i386")
 ENTRY(init_system)
 
 SECTIONS

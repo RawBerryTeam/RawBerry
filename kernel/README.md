@@ -1,3 +1,3 @@
 # Kernel directory
 
-Main directory for kernel.
+Main directory for RawBerry kernel.

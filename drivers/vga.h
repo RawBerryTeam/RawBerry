@@ -7,11 +7,7 @@
 #define VGA_HEIGHT 25
 #define VGA_ADDRESS 0xB8000
 
-static uint16_t* vga_buffer = (uint16_t*)VGA_ADDRESS;
-static uint8_t vga_color = VGA_COLOR_LIGHT_GREY | (VGA_COLOR_BLACK << 4);
-static uint16_t vga_row = 0;
-static uint16_t vga_column = 0;
-
+// Color definitions
 enum vga_color {
     VGA_COLOR_BLACK = 0,
     VGA_COLOR_BLUE = 1,
@@ -31,8 +27,13 @@ enum vga_color {
     VGA_COLOR_WHITE = 15,
 };
 
+extern uint16_t* vga_buffer;
+extern uint8_t vga_color;
+extern uint16_t vga_row;
+extern uint16_t vga_column;
+
 uint16_t vga_entry(unsigned char uc, uint8_t color);
 void vga_initialize(void);
 void vga_print_string(const char* str);
 
-#endif
+#endif  // VGA_H

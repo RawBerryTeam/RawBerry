@@ -1,7 +1,13 @@
 #include "vga.h"
+#include <stddef.h>
+
+uint16_t* vga_buffer = (uint16_t*)VGA_ADDRESS;
+uint8_t vga_color = VGA_COLOR_LIGHT_GREY | (VGA_COLOR_BLACK << 4);
+uint16_t vga_row = 0;
+uint16_t vga_column = 0;
 
 uint16_t vga_entry(unsigned char uc, uint8_t color) {
-    return (uint16_t) uc | (uint16_t) color << 8;
+    return (uint16_t)(uc | (color << 8));
 }
 
 void vga_initialize(void) {

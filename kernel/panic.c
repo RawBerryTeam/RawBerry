@@ -6,7 +6,7 @@
  * ---------------------------------------------------------------
 */
 
-#include <stdbool.h>
+#include "../include/stdbool.h"
 
 /**
  * Stops every single process and frozes the system.
