@@ -1,0 +1,6 @@
+/target
+/out
+/iso
+*.o
+rawberry.iso
+.vscode
