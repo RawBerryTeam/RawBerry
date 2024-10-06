@@ -2,40 +2,32 @@ ifeq ($(OS),Windows_NT)
 $(error lmao compiling on windows is not allowed)
 endif
 
-ISO_NAME = system.iso
-SRC_DIR = ./
-INCLUDE_DIR = ./include
-BUILD_DIR = build
-ISO_DIR = ./
-GRUB_DIR = $(ISO_DIR)/boot/grub
-GRUB_CFG = $(GRUB_DIR)/grub.cfg
 CC = gcc
-CFLAGS = -Wall -Wextra -nostdlib -I$(INCLUDE_DIR)
-SRCS = $(wildcard $(SRC_DIR)/*.c)
-OBJS = $(SRCS:$(SRC_DIR)/%.c=$(BUILD_DIR)/%.o)
+CFLAGS = -ffreestanding -nostdlib -I ./include
+LDFLAGS = -T ./kernel/linker.ld
+OBJS = $(patsubst %.c,%.o,$(wildcard **/*.c))
+KERNEL = kernel.bin
+ISO = rawberry.iso
 
-LD = ld
-LDFLAGS = -T linker.ld
+all: $(ISO)
 
-all: iso clean
+compile: $(OBJS)
 
-$(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
-	mkdir -p $(BUILD_DIR)
+%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-kernel.bin: $(OBJS)
-	$(LD) $(LDFLAGS) -o kernel.bin $(OBJS)
+$(KERNEL): compile
+	$(CC) $(LDFLAGS) $(OBJS) -o $(KERNEL)
 
-iso: kernel.bin grub_cfg
-	mkdir -p $(ISO_DIR)/boot
-	cp kernel.bin $(ISO_DIR)/boot/
-	grub-mkrescue -o $(ISO_NAME) $(ISO_DIR)
+$(ISO): $(KERNEL)
+	mkdir -p iso/boot/grub
+	cp $(KERNEL) iso/boot/kernel.bin
+	cp ./boot/grub/grub.cfg iso/boot/grub/
+	grub-mkrescue -o $(ISO) iso
 
-grub_cfg:
-	mkdir -p $(GRUB_DIR)
-	cp boot/grub/grub.cfg $(GRUB_CFG)
+run: $(ISO)
+	qemu-system-x86_64 -cdrom $(ISO)
 
 clean:
-	rm -rf $(BUILD_DIR) kernel.bin
-
-.PHONY: all clean iso grub_cfg
+	rm -f *.o $(KERNEL) $(ISO)
+	rm -rf iso
