@@ -13,6 +13,6 @@
  */
 void kernel_panic() {
     while (true) {
-        // Now do nothing. It only keeps system from restarting.
+        // Now do nothing. It only keeps system from restarting. 
     }
 }
