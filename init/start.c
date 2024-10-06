@@ -7,12 +7,13 @@
 */
 
 #include <declarations.h>
+#include "../drivers/vga.h"
 
-/**
- * Main function. Here kernel will start its work. 
- */
 void init_system() {
-    // After doing this, we can launch final kernel
+    vga_initialize();
+    vga_color = 11;
+    vga_print_string("[ Booting kernel ]");
+    vga_color = 15;
     launch_kernel();
     return;
 }
