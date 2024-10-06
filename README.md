@@ -23,3 +23,7 @@ We use our [GitHub organization](https://github.com/RawBerryTeam) to host RawBer
 - [blackneeed](https://github.com/blackneeed)
  
 The order is not important.
+
+## License
+
+MIT
