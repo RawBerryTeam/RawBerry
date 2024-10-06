@@ -13,3 +13,5 @@ multiboot_header_t multiboot_header __attribute__((section(".multiboot"))) = {
     .flags = MULTIBOOT_HEADER_FLAGS,
     .checksum = MULTIBOOT_CHECKSUM,
 };
+
+void launch_kernel(void);

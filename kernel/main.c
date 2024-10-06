@@ -7,8 +7,6 @@
 */
 #include "main.h"
 
-void launch_kernel(void);
-
 /**
  * Launches kernel.
  */
