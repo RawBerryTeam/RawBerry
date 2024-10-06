@@ -6,6 +6,9 @@
  * ---------------------------------------------------------------
 */
 
-void kernel(void) {
+/**
+ * Launches kernel.
+ */
+void launch_kernel(void) {
 
 }
