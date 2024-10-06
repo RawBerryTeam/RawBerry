@@ -6,7 +6,7 @@
  * ---------------------------------------------------------------
 */
 
-#include "../include/stdbool.h"
+#include <stdbool.h>
 #include "../drivers/vga.h"
 
 /**
