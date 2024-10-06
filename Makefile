@@ -21,7 +21,7 @@ $(KERNEL): compile
 
 $(ISO): $(KERNEL)
 	mkdir -p iso/boot/grub
-	cp $(KERNEL) iso/boot/kernel.bin
+	cp $(KERNEL) iso/boot/kernel.elf  # Zmieniamy nazwę na kernel.elf
 	cp ./boot/grub/grub.cfg iso/boot/grub/
 	grub-mkrescue -o $(ISO) iso
 
