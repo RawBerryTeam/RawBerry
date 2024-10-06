@@ -12,7 +12,7 @@
 void init_system() {
     vga_initialize();
     vga_color = 11;
-    vga_print_string("[ Booting kernel ]");
+    vga_print_string("[ Booting kernel ]\n");
     vga_color = 15;
     launch_kernel();
     return;
