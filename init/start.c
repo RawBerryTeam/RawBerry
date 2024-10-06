@@ -7,6 +7,7 @@
 */
 
 void main(void);
+void launch_kernel(void);
 
 /**
  * Main function. Here kernel will start its work.
