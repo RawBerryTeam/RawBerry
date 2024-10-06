@@ -7,7 +7,7 @@
 */
 
 /**
- * Main function. Here kernel will start its work.
+ * Main function. Here kernel will start its work. 
  */
 int main() {
     return 0;
