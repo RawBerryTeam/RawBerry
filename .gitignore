@@ -3,5 +3,6 @@
 /iso
 *.o
 *.bin
+*.elf
 *.iso
 .vscode
