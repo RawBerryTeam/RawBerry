@@ -6,15 +6,6 @@
  * ---------------------------------------------------------------
 */
 
-#include <stdint.h>
-
+void main(void);
+void launch_kernel(void);
 void kernel_panic(void);
-
-/**
- * Stops every single process and frozes the system.
- */
-void kernel_panic() {
-    while (true) {
-        // Now do nothing. It only keeps system from restarting.
-    }
-}

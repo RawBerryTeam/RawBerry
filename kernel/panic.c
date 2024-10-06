@@ -5,14 +5,14 @@
  * Published on license MIT. Read `/LICENSE` for more details.
  * ---------------------------------------------------------------
 */
-#include "main.h"
-#include "../drivers/vga.h"
+
+#include <stdbool.h>
 
 /**
- * Launches kernel.
+ * Stops every single process and frozes the system.
  */
-void launch_kernel(void) {
-    vga_initialize();
-    vga_print_string("Hello, RawBerry OS!\n");
-    vga_print_string("Welcome to your custom kernel.");
+void kernel_panic() {
+    while (true) {
+        // Now do nothing. It only keeps system from restarting.
+    }
 }
