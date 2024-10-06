@@ -28,4 +28,4 @@ The order is not important.
 
 ## License
 
-MIT
+MIT.
