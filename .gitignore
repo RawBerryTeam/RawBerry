@@ -2,5 +2,6 @@
 /out
 /iso
 *.o
-rawberry.iso
+*.bin
+*.iso
 .vscode

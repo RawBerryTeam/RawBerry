@@ -1,20 +1,32 @@
-OUTPUT_FORMAT("elf32-i386")
+OUTPUT_FORMAT("elf64-x86-64")
 ENTRY(main)
 
 SECTIONS
 {
-    . = 0x1000;
+    . = 0x400000;
     
     .text : {
-        *(.text) 
+        *(.text)
     }
-    
+
+    .rodata : {
+        *(.rodata) 
+    }
+
     .data : {
-        *(.data)
+        *(.data)  
     }
 
     .bss : {
-        *(.bss)         
-        *(COMMON) 
+        *(.bss)
+    }
+
+    .debug : {
+        *(.debug.*)
+    }
+
+    /DISCARD/ : {
+        *(.comment)
+        *(.note)
     }
 }

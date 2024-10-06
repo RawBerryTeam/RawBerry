@@ -3,7 +3,7 @@ $(error install linux bro)
 endif
 
 CC = gcc
-CFLAGS = -ffreestanding -nostdlib -Iinclude -m32
+CFLAGS = -ffreestanding -nostdlib -Iinclude
 LDFLAGS = -T ./kernel/linker.ld
 OBJS = $(patsubst %.c,%.o,$(wildcard **/*.c))
 KERNEL = kernel.bin
