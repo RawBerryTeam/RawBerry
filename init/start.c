@@ -6,6 +6,8 @@
  * ---------------------------------------------------------------
 */
 
+void main(void);
+
 /**
  * Main function. Here kernel will start its work.
  */
