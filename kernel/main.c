@@ -7,12 +7,13 @@
 */
 #include "main.h"
 #include "../drivers/vga.h"
+#include "../drivers/port.h"
+#include <stdio.h>
 
-/**
- * Launches kernel.
- */
 void launch_kernel(void) {
     vga_initialize();
-    vga_print_string("Hello, RawBerry OS!\n");
-    vga_print_string("Welcome to your custom kernel.");
+    vga_print_string("Kernel loaded.\n");
+    vga_print_string("Welcome RawBerry!\n");
+    
+    vga_print_string("user.host > ");
 }
