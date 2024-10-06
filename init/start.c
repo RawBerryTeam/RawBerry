@@ -6,8 +6,7 @@
  * ---------------------------------------------------------------
 */
 
-void main(void);
-void launch_kernel(void);
+#include <declarations.h>
 
 /**
  * Main function. Here kernel will start its work.

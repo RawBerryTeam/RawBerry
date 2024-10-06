@@ -8,8 +8,6 @@
 
 #include <stdbool.h>
 
-void kernel_panic(void);
-
 /**
  * Stops every single process and frozes the system.
  */
