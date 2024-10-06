@@ -1,1 +1,3 @@
-placeholder
+# Kernel directory
+
+Main directory for kernel.
