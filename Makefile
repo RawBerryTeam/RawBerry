@@ -1,9 +1,9 @@
 ifeq ($(OS),Windows_NT)
-$(error lmao compiling on windows is not allowed)
+$(error install linux bro)
 endif
 
 CC = gcc
-CFLAGS = -ffreestanding -nostdlib -I ./include
+CFLAGS = -ffreestanding -nostdlib -I./include
 LDFLAGS = -T ./kernel/linker.ld
 OBJS = $(patsubst %.c,%.o,$(wildcard **/*.c))
 KERNEL = kernel.bin

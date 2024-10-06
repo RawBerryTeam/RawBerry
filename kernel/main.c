@@ -5,3 +5,7 @@
  * Published on license MIT. Read `/LICENSE` for more details.
  * ---------------------------------------------------------------
 */
+
+void kernel_main(void) {
+
+}

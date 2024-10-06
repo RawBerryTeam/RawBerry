@@ -6,15 +6,12 @@
  * ---------------------------------------------------------------
 */
 
-#include <stdbool.h>
-
-void kernel_panic(void);
+/**
+ * True keyword. Represents one.
+ */
+const int true = 1;
 
 /**
- * Stops every single process and frozes the system.
+ * False keyword. Represents zero.
  */
-void kernel_panic() {
-    while (true) {
-        // Now do nothing. It only keeps system from restarting.
-    }
-}
+const int false = 0;
