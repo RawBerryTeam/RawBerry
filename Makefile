@@ -1,7 +1,9 @@
+# Block Windows users from running Makefile
 ifeq ($(OS),Windows_NT)
-$(error install linux bro)
+$(error Compilation on Windows is not allowed)
 endif
 
+# Variables
 CC = gcc
 CFLAGS = -ffreestanding -nostdlib -Iinclude
 LDFLAGS = -T ./kernel/linker.ld
@@ -9,6 +11,9 @@ OBJS = $(patsubst %.c,%.o,$(wildcard **/*.c))
 KERNEL = kernel.elf
 ISO = rawberry.iso
 
+# ----------------------------------------------------------------
+#                   MAKEFILE LOGIC STARTS HERE
+# ----------------------------------------------------------------
 all: $(ISO)
 
 compile: $(OBJS)
