@@ -1,4 +1,6 @@
 #include "vga.h"
+#include <stddef.h>
+#include <stdint.h>
 
 static uint16_t* vga_buffer = (uint16_t*)VGA_ADDRESS;
 static uint8_t vga_color = VGA_COLOR_LIGHT_GREY | (VGA_COLOR_BLACK << 4);

@@ -9,6 +9,5 @@
 /**
  * Main function. Here kernel will start its work.
  */
-int main() {
-    return 0;
+void main() {
 }
