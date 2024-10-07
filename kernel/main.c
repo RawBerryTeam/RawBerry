@@ -13,6 +13,6 @@
 void launch_kernel(void) {
     vga_initialize();
     vga_print_string("Kernel loaded.\n");
-    ports_log(); //hehehe
+    print_log(); //hehehe
     vga_print_string("Welcome RawBerry!\n");
 }
