@@ -6,6 +6,8 @@
  * ---------------------------------------------------------------
 */
 
+#include "vga.h"
+
 /**
  * Read a byte from the specified port
  */
@@ -40,4 +42,8 @@ unsigned short port_word_in (unsigned short port) {
 
 void port_word_out (unsigned short port, unsigned short data) {
     __asm__("out %%ax, %%dx" : : "a" (data), "d" (port));
+}
+
+void print_log() {
+    vga_print_string("Ports Loaded.\n");
 }
