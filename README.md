@@ -22,9 +22,10 @@ We use our [GitHub organization](https://github.com/RawBerryTeam) to host RawBer
 - [Jakyb](https://github.com/Goldjakyt)
 - [blackneeed](https://github.com/blackneeed)
 - [Eklerka25](https://github.com/Eklerka25)
+- [Fivvee0](https://github.com/Fivvee0)
  
 The order is not important.
 
 ## License
 
-MIT
+MIT.
