@@ -8,6 +8,7 @@
 #include "main.h"
 #include "../drivers/vga.h"
 #include "../drivers/port.h"
+#include "../drivers/keyboard.h"
 #include <stdio.h>
 
 void launch_kernel(void) {
@@ -16,5 +17,9 @@ void launch_kernel(void) {
     ports_log(); //hehehe
     vga_print_string("Welcome RawBerry!\n");
     
-    vga_print_string("user.host > ");
+    init_keyboard();  
+
+    while(1) {
+        
+    }
 }
