@@ -16,5 +16,4 @@ void launch_kernel(void) {
     ports_log();
     vga_print_string("Welcome RawBerry!\n");
     
-    vga_print_string("user.host > ");
 }
