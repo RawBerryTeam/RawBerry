@@ -4,6 +4,11 @@ ENTRY(init_system)
 SECTIONS
 {
     . = 0x400000;
+
+    .multiboot :
+    {
+        KEEP(*(.multiboot))
+    }
     
     .text : {
         *(.text)
