@@ -8,7 +8,6 @@
 #include "main.h"
 #include "../drivers/vga.h"
 #include "../drivers/port.h"
-#include "../drivers/keyboard.h"
 #include <stdio.h>
 
 void launch_kernel(void) {
