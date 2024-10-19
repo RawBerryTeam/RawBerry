@@ -2,6 +2,9 @@
 
 A simple and lightweight operation system from RawBerry team.
 
+> [!NOTICE]
+> Trying to restore life to this project. 
+
 ## Official Discord Server
 
 Join for support and chit chatting - https://discord.gg/umgMqTaY44
