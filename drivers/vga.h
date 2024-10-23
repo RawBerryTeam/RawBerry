@@ -2,6 +2,7 @@
 #define VGA_H
 
 #include <stdint.h>
+#include <stddef.h>
 
 #define VGA_WIDTH 80
 #define VGA_HEIGHT 25
@@ -35,5 +36,7 @@ extern uint16_t vga_column;
 uint16_t vga_entry(unsigned char uc, uint8_t color);
 void vga_initialize(void);
 void vga_print_string(const char* str);
+void vga_put_char(char c);
+void vga_putentryat(char c, uint8_t color, size_t x, size_t y);
 
 #endif  // VGA_H
