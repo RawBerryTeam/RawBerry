@@ -86,14 +86,15 @@ void remove_last_char(char* str, size_t* len) {
     }
 }
 void handle_keypress(char c, void callback) {
+    callback(c);
+
 	if (c == '\n') {  // Check if the Enter key was pressed
         // Process the input stored in input_buffer (e.g., print it)
         vga_print_string("\n");
-        callback(*input_char);
         clear_buffer();         // New line after the input
         input_len = 0;  // Reset input length for new input
         return;  // Don't add the newline character to the buffer
-    }else if (c == '\b') {  // Backspace
+    } else if (c == '\b') {  // Backspace
         if (input_len > 0) {
             remove_last_char(input_char, &input_len);  // Remove last character from input buffer
             
