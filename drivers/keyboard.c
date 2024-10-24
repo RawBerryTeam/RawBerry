@@ -85,10 +85,11 @@ void remove_last_char(char* str, size_t* len) {
         str[*len] = '\0';  // Null-terminate after removal
     }
 }
-void handle_keypress(char c) {
+void handle_keypress(char c, void callback) {
 	if (c == '\n') {  // Check if the Enter key was pressed
         // Process the input stored in input_buffer (e.g., print it)
-        vga_print_string("\n");  
+        vga_print_string("\n");
+        callback(*input_char);
         clear_buffer();         // New line after the input
         input_len = 0;  // Reset input length for new input
         return;  // Don't add the newline character to the buffer
@@ -126,13 +127,13 @@ void getInput(char *output){
 
 }
 
-void keyboard_handler(void) {
+void keyboard_handler(void callback) {
     uint8_t scancode = inb(0x60);
     
     if (scancode < sizeof(scancode_to_char)) {
         char key = scancode_to_char[scancode];
         if (key) {
-            handle_keypress(key);  // Handle the keypress by storing the char and displaying it
+            handle_keypress(key, callback);  // Handle the keypress by storing the char and displaying it
         }
     }
 	delay(60000);
