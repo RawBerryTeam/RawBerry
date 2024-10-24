@@ -8,11 +8,13 @@
 #include "main.h"
 #include "../drivers/vga.h"
 #include "../drivers/port.h"
-#include <stdio.h>
+#include "systemio/systemio.h"
+#include "stdio.h" // :: There is no standard yet, either switch to "stdio.h" or comment it out until
+//                    :: there is implementation for it
 
 void launch_kernel(void) {
     vga_initialize();
-    vga_print_string("Kernel loaded.\n");
+    out("kernel", "info", "Kernel has initialized");
     print_log(); //hehehe
-    vga_print_string("Welcome RawBerry!\n");
+    printf("Welcome to RawBerry!\n");
 }

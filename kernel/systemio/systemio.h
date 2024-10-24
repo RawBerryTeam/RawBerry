@@ -1,0 +1,1 @@
+void out(char* PROCESS_NAME, char* TEXT)
