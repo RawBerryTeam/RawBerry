@@ -8,8 +8,8 @@
 #include "main.h"
 #include "../drivers/vga.h"
 #include "../drivers/port.h"
-#include "systemio/systemio.h"
-#include "stdio.h" // :: There is no standard yet, either switch to "stdio.h" or comment it out until
+#include "systemio.h"
+#include "../include/stdio.h" // :: There is no standard yet, either switch to "stdio.h" or comment it out until
 //                    :: there is implementation for it
 
 void launch_kernel(void) {

@@ -8,6 +8,6 @@ enum SYSTEMIO_OUT_TYPE {
   SYSTEMIO_OUT_PANIC = 4,
 };
 
-void out(char* PROCESS_NAME, SYSTEMIO_OUT_TYPE OUT_TYPE, char* TEXT)
+void out(char* PROCESS_NAME, enum SYSTEMIO_OUT_TYPE OUT_TYPE, char* TEXT);
 
 #endif

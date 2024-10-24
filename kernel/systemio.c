@@ -1,10 +1,8 @@
 #include "systemio.h"
 #include "../drivers/vga.h"
+#include "../include/stdio.h"
 
-void out(char* PROCESS_NAME, SYSTEMIO_OUT_TYPE OUT_TYPE, char* TEXT) {
-    // May be pretty stupid to make the output look pretty, but it will be way better
-    // when trying to debug.
-
+void out(char* PROCESS_NAME, enum SYSTEMIO_OUT_TYPE OUT_TYPE, char* TEXT) {
     switch (OUT_TYPE) {
         case 1:
             vga_print_string(("[%s/info]: %s", PROCESS_NAME, TEXT)); // just to be safe, double ()()
