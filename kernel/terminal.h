@@ -6,6 +6,9 @@ Terminal jobs. This should be mostly:
 Any more should be placed in a seperate header file.
 */
 
+#ifndef TERMINAL_H_
+#define TERMINAL_H_
+
 #include "../drivers/keyboard.h"
 #include "systemio.h"
 
@@ -51,10 +54,9 @@ void callback(char input) {
     //  \b : BACKSPACE key
 }
 
-void InitTerminal() {
+void init_terminal() {
     out("rterminal", SYSTEMIO_OUT_INFO, "terminal is init");
-    
-    while (1) {
-        keypress_handler(callback); // handle keypress, will send to callback()
-    }
+    keypress_handler(callback); // handle keypress, will send to callback()
 }
+
+#endif
