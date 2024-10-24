@@ -1,2 +1,2 @@
 void printf(char* text);
-char* scanf();
+char *scanf();
