@@ -11,10 +11,17 @@
 #include "systemio.h"
 #include "../include/stdio.h" // :: There is no standard yet, either switch to "stdio.h" or comment it out until
 //                    :: there is implementation for it
+#include "terminal.h"
+#include "../include/rbsh/shell.h"
 
 void launch_kernel(void) {
     vga_initialize();
     out("kernel", SYSTEMIO_OUT_INFO, "Kernel has initialized");
     print_log(); //hehehe
     printf("Welcome to RawBerry!\n");
+
+    while (1) {
+        init_terminal();
+        shell_loop();
+    }
 }

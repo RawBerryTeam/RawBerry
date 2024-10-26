@@ -1,5 +1,6 @@
 #include "stdio.h"
 #include "../drivers/vga.h"
+#include "../kernel/terminal.h"
 
 void printf(char* text) {
     /*
@@ -12,6 +13,7 @@ void printf(char* text) {
     vga_print_string(text);
 }
 
-char* scanf() {
-    // Used when keyboard driver is added. Should be pretty basic to implement.
+char *scanf() {
+    // See terminal.h in kernel for implementation
+    return scan();
 }

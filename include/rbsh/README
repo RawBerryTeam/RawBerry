@@ -1,0 +1,5 @@
+RawBerry Shell
+=========================
+This is an experimental shell for RawBerry that integrates
+closely with the kernel. Would not use this unless you have
+to for now.
