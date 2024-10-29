@@ -1,37 +1,29 @@
-OUTPUT_FORMAT("elf32-i386")
 ENTRY(init_system)
 
 SECTIONS
 {
-    . = 0x400000;
+	. = 2M;
 
-    .multiboot :
-    {
-        KEEP(*(.multiboot))
-    }
-    
-    .text : {
-        *(.text)
-    }
+    /* all are from boot.s */
+	.text BLOCK(4K) : ALIGN(4K)
+	{
+		*(.multiboot)
+		*(.text)
+	}
 
-    .rodata : {
-        *(.rodata) 
-    }
+	.rodata BLOCK(4K) : ALIGN(4K)
+	{
+		*(.rodata)
+	}
 
-    .data : {
-        *(.data)  
-    }
+	.data BLOCK(4K) : ALIGN(4K)
+	{
+		*(.data)
+	}
 
-    .bss : {
-        *(.bss)
-    }
-
-    .debug : {
-        *(.debug.*)
-    }
-
-    /DISCARD/ : {
-        *(.comment)
-        *(.note)
-    }
+	.bss BLOCK(4K) : ALIGN(4K)
+	{
+		*(COMMON)
+		*(.bss)
+	}
 }
