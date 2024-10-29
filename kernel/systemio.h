@@ -1,0 +1,13 @@
+#ifndef SYSTEMIO_H_
+#define SYSTEMIO_H_
+
+enum SYSTEMIO_OUT_TYPE {
+  SYSTEMIO_OUT_INFO = 1,
+  SYSTEMIO_OUT_WARN = 2,
+  SYSTEMIO_OUT_ERROR = 3,
+  SYSTEMIO_OUT_PANIC = 4,
+};
+
+void out(char* PROCESS_NAME, enum SYSTEMIO_OUT_TYPE OUT_TYPE, char* TEXT);
+
+#endif

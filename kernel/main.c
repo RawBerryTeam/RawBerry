@@ -9,16 +9,16 @@
 #include "../drivers/vga.h"
 #include "../drivers/port.h"
 #include "../drivers/keyboard.h"
-#include <stdio.h>
+#include "../include/stdio.h" // :: There is no standard yet, either switch to "stdio.h" or comment it out until
+//                               :: there is implementation for it
 
 void launch_kernel(void) {
     vga_initialize();
-    vga_print_string("Kernel loaded.\n");
+    out("kernel", SYSTEMIO_OUT_INFO, "Kernel has initialized");
     print_log(); //hehehe
-    vga_print_string("Welcome RawBerry!\n");
+    vga_print_string("Welcome to RawBerry OS!\n");
     while (1)
     {
         keyboard_handler();
     }
-    
 }
