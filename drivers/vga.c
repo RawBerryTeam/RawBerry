@@ -51,3 +51,8 @@ void vga_print_string(const char* str) {
         vga_put_char(str[i]);
     }
 }
+void vga_putentryat(char c, uint8_t color, size_t x, size_t y) 
+{
+	const size_t index = y * VGA_WIDTH + x;
+	vga_buffer[index] = vga_entry(c, color);
+}
