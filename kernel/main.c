@@ -14,8 +14,6 @@
 
 void launch_kernel(void) {
     vga_initialize();
-    out("kernel", SYSTEMIO_OUT_INFO, "Kernel has initialized");
-    print_log(); //hehehe
     vga_print_string("Welcome to RawBerry OS!\n");
     while (1)
     {

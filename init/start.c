@@ -9,7 +9,7 @@
 #include <declarations.h>
 #include "../drivers/vga.h"
 
-void init_system() {
+void _start() {
     vga_initialize();
     vga_color = 11;
     vga_print_string("[ Booting kernel ]\n");
