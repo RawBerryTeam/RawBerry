@@ -1,8 +1,8 @@
 # RawBerry
 RawBerry is a lightweight and simple operating system by [The RawBerry Team](https://github.com/rawberryteam).
 
-> [!NOTE]
-> This project is trying to be revived. Join our offical Discord server for support and chat: https://discord.gg/umgMqTaY44
+> [!CAUTION]
+> This project is dead
 
 ## Features
 Actually nothing... We are working hard to create useful features for this OS.
