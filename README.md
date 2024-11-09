@@ -1,9 +1,6 @@
 # RawBerry
 RawBerry is a lightweight and simple operating system by [The RawBerry Team](https://github.com/rawberryteam).
 
-> [!CAUTION]
-> This project is dead
-
 ## Features
 Actually nothing... We are working hard to create useful features for this OS.
 
