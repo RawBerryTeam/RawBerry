@@ -146,11 +146,23 @@ void keyboard_isr(void) {
     // Send End of Interrupt (EOI) signal to PIC
     outb(0x20, 0x20);
 }
-char Printch(char c){
-    vga_put_char(c);
+char Printch(char c) {
+    if (c == '\b') { // Backspace handling
+        if (vga_column > 0) {
+            vga_column--; // Move cursor back in the same row
+        } else if (vga_row > 0) {
+            vga_row--;                 // Move up one row
+            vga_column = VGA_WIDTH - 1; // Set to last column of the previous row
+        }
+        vga_putentryat(' ', vga_color, vga_column, vga_row); // Clear character
+    } else {
+        vga_put_char(c); // Normal character printing
+    }
+    return c;
 }
+
 char* readStr() {
-    char buffstr[256];  // Buffer to hold the input string, with a size limit
+    static char buffstr[256];  // Buffer to hold the input string, with a size limit
     uint8_t i = 0;
     uint8_t reading = 1;
 
@@ -195,8 +207,10 @@ char* readStr() {
                 case 26: Printch('['); buffstr[i++] = '['; break;
                 case 27: Printch(']'); buffstr[i++] = ']'; break;
                 case 28: // Enter key
-                    Printch('\n');
+                    buffstr[i] = '\n';
+                    i++;
                     buffstr[i] = 0;
+                    Printch('\n');
                     reading = 0; // Exit the loop
                     break;
                 case 29: // Left Control key

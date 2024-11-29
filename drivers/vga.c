@@ -36,7 +36,9 @@ void vga_put_char(char c) {
         vga_column = 0;
         return;
     }
-
+    if (c == '\0') {
+        c = ' ';  // Replace with a space
+    }
     vga_buffer[vga_row * VGA_WIDTH + vga_column] = vga_entry(c, vga_color);
     if (++vga_column == VGA_WIDTH) {
         vga_column = 0;

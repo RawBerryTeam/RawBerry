@@ -6,3 +6,4 @@ void keyboard_isr(void);
 size_t strlen(const char* str);
 void getInput(char *output);
 void clear_buffer();
+char* readStr();
