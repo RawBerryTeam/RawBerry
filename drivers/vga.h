@@ -38,5 +38,6 @@ void vga_initialize(void);
 void vga_print_string(const char* str);
 void vga_put_char(char c);
 void vga_putentryat(char c, uint8_t color, size_t x, size_t y);
-
+void vga_clear_screen(void);
+void vga_update_cursor(uint16_t x, uint16_t y);
 #endif  // VGA_H

@@ -21,6 +21,7 @@ static inline uint8_t inb(uint16_t port) {
     );
     return ret;
 }
+
 void pit_init(uint32_t frequency) {
     // Set PIT to the desired frequency
     uint32_t divisor = 1193180 / frequency; // PIT frequency is 1193180 Hz
@@ -135,7 +136,7 @@ void keyboard_handler(void) {
             handle_keypress(key);  // Handle the keypress by storing the char and displaying it
         }
     }
-	delay(60000);
+	delay(180000);
 }
 
 
@@ -251,7 +252,9 @@ char* readStr() {
                 case 57: Printch(' '); buffstr[i++] = ' '; break; // Another space key (for different keycode)
                 default: break; // Ignore other keycodes
             }
+            
         }
+        
     }
     return buffstr;
 }

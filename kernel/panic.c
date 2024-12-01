@@ -12,9 +12,10 @@
 /**
  * Stops every single process and frozes the system.
  */
-void kernel_panic() {
+void kernel_panic(const char* msg) {
     vga_initialize();
     vga_color = 12;
-    vga_print_string("Kernel panic!");
+    vga_print_string("Kernel panic! ");
+    vga_print_string(msg);
     while (true) {}
 }

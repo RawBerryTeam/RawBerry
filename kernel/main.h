@@ -16,4 +16,4 @@ multiboot_header_t multiboot_header __attribute__((section(".multiboot"))) = {
 };
 
 void launch_kernel(void);
-void kernel_panic(void);
+void kernel_panic(const char* msg);
