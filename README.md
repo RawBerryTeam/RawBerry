@@ -28,15 +28,15 @@ The order is not important.
 ## License
 The MIT License.
 
-## Non-offical (util i get as cotributaor on RedberryTeam or whatever)
+## Non-official (until I get as contributor on RedberryTeam or whatever)
 - [Firelabs-io](https://github.com/firelabs-io)
     **dev-7073A: https://github.com/firelabs-io/RawBerry/tree/dev-7073A**
 
-## uninportant (from dev-7073A):
-- feactures: 
-    - basic echo
-    - clear
-    - help
-    - logo
-    - about
-    yep that its
+## Unimportant (from dev-7073A):
+- Features:
+    - Basic echo
+    - Clear
+    - Help
+    - Logo
+    - About
+    Yep, that's it.
