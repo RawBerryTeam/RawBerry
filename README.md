@@ -7,12 +7,10 @@ RawBerry is a lightweight and simple operating system by [The RawBerry Team](htt
 ## Features
 Actually nothing... We are working hard to create useful features for this OS.
 
-
-
 ## Languages
 - C
 - Assembly 
-- Rust (note from firelabs-io: only on network pls, i suck at it)
+- Rust
 - C++
 
 ## Authors
@@ -27,16 +25,3 @@ The order is not important.
 
 ## License
 The MIT License.
-
-## Non-official (until I get as contributor on RedberryTeam or whatever)
-- [Firelabs-io](https://github.com/firelabs-io)
-    **dev-7073A: https://github.com/firelabs-io/RawBerry/tree/dev-7073A**
-
-## Unimportant (from dev-7073A):
-- Features:
-    - Basic echo
-    - Clear
-    - Help
-    - Logo
-    - About
-    Yep, that's it.
